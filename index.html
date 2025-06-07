@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>康威生命游戏 - 创造者版</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>康威生命游戏 - 创造者版</h1>
+    
+    <div class="main-container">
+        <div class="controls-panel">
+            <fieldset>
+                <legend>仿真控制</legend>
+                <button id="start-pause-button">开始</button>
+                <div class="info-text">点击画布上的格子可以切换其**黑白状态 (生死)**。编辑时仿真会自动暂停。</div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>规则选择</legend>
+                <label for="rule-select">预设规则:</label>
+                <select id="rule-select"></select>
+                
+                <label for="survival-rules">存活 (S):</label>
+                <input type="text" id="survival-rules">
+                
+                <label for="birth-rules">诞生 (B):</label>
+                <input type="text" id="birth-rules">
+                <div class="info-text" style="margin-top: 15px;">
+                选择“自定义...”或直接修改上方输入框，用英文逗号分隔邻居数量即可创建新规则（例如，存活数量2,3表示当存活格子的周围八个格子中有两个或三个存活时，下一代存活）。
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>网格设置</legend>
+                <button id="randomize-button">随机生成</button>
+                <button id="clear-button">全部清空</button>
+            </fieldset>
+        </div>
+        
+        <canvas id="game-canvas"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
