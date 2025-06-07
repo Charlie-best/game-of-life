@@ -84,3 +84,35 @@ input[type=text] {
     border: 1px solid #ddd;
     cursor: pointer; /* 提示用户画布是可点击的 */
 }
+
+/* --- 响应式设计：针对小屏幕设备的优化 --- */
+@media (max-width: 900px) {
+
+  /* 1. 让主容器垂直堆叠，而不是并排显示 */
+  .main-container {
+    flex-direction: column;
+    align-items: center; /* 让所有内容在垂直方向上居中对齐 */
+    gap: 20px;
+  }
+
+  /* 2. 让控制面板适应屏幕宽度 */
+  .controls-panel {
+    width: 90vw; /* 宽度为屏幕可视宽度的90% */
+    max-width: 500px; /* 在平板等设备上也不会过宽 */
+  }
+
+  /* 3. 让画布也适应屏幕宽度，并保持合适的比例 */
+  /* 重要：这里只修改了画布的显示大小，不影响JS里的格子数量计算 */
+  #game-canvas {
+    width: 90vw; /* 宽度与控制面板一致 */
+    height: 75vw; /* 高度按一定比例缩放，可以根据喜好调整 */
+    max-width: 500px; 
+    max-height: 420px;
+  }
+
+  /* 4. 也可以适当调整标题字体大小，使其在手机上更好看 */
+  h1 {
+    font-size: 1.8em;
+    text-align: center;
+  }
+}
