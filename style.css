@@ -115,4 +115,19 @@ input[type=text] {
     font-size: 1.8em;
     text-align: center;
   }
+  .controls-panel {
+    order: 1;
+  }
+
+  /* 画布在中间 (顺序2) */
+  #game-canvas {
+    order: 2;
+  }
+
+  /* “开始”按钮所在的fieldset在最下面 (顺序3) */
+  .main-container > fieldset {
+    order: 3;
+    width: 90vw; /* 让它和其它控制项一样宽 */
+    max-width: 500px;
+  }
 }

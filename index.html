@@ -11,11 +11,6 @@
     
     <div class="main-container">
         <div class="controls-panel">
-            <fieldset>
-                <legend>仿真控制</legend>
-                <button id="start-pause-button">开始</button>
-                <div class="info-text">点击画布上的格子可以切换其**黑白状态 (生死)**。编辑时仿真会自动暂停。</div>
-            </fieldset>
             
             <fieldset>
                 <legend>规则选择</legend>
@@ -38,7 +33,11 @@
                 <button id="clear-button">全部清空</button>
             </fieldset>
         </div>
-        
+        <fieldset>
+                <legend>仿真控制</legend>
+                <button id="start-pause-button">开始</button>
+                <div class="info-text">点击画布上的格子可以切换其**黑白状态 (生死)**。编辑时仿真会自动暂停。</div>
+        </fieldset>
         <canvas id="game-canvas"></canvas>
     </div>
 
