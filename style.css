@@ -25,6 +25,22 @@ h1 {
     gap: 15px;
     width: 250px;
 }
+.speed-control-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* 滑块和数值之间的间距 */
+}
+
+input[type="range"] {
+    flex-grow: 1; /* 让滑块占据多余的空间 */
+}
+
+#speed-value {
+    font-weight: bold;
+    color: #333;
+    min-width: 60px; /* 保证数值显示区域宽度足够，防止抖动 */
+    text-align: right;
+}
 
 fieldset {
     border: 1px solid #ccd0d5;

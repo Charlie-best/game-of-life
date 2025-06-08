@@ -11,7 +11,6 @@
     
     <div class="main-container">
         <div class="controls-panel">
-            
             <fieldset>
                 <legend>规则选择</legend>
                 <label for="rule-select">预设规则:</label>
@@ -22,8 +21,14 @@
                 
                 <label for="birth-rules">诞生 (B):</label>
                 <input type="text" id="birth-rules">
-                <div class="info-text" style="margin-top: 15px;">
-                选择“自定义...”或直接修改上方输入框，用英文逗号分隔邻居数量即可创建新规则（例如，存活数量2,3表示当存活格子的周围八个格子中有两个或三个存活时，下一代存活）。
+            </fieldset>
+
+            <fieldset>
+                <legend>速度控制</legend>
+                <label for="speed-slider">演化间隔 (毫秒)</label>
+                <div class="speed-control-container">
+                    <input type="range" id="speed-slider" min="10" max="500" value="100">
+                    <span id="speed-value">100 ms</span>
                 </div>
             </fieldset>
 
